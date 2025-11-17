@@ -16,3 +16,13 @@ def add(a, b):
 numbers = (1, 2)
 
 print(add(*numbers))
+
+nested_numbers = (1,2, (3,4))
+
+def add_nested(a, b, *c):
+    (c1, c2), = c
+    return a + b + c1 + c2
+
+result = add_nested(*nested_numbers)
+
+print(result)

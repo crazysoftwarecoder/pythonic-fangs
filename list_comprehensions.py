@@ -30,3 +30,14 @@ list_b = [1,3,5,7,9]
 paired_numbers = [(a,b) for a in list_a for b in list_b]
 
 print("Paired numbers: ", paired_numbers)
+
+# Filtering points in second quadrant
+
+def filter_points(points):
+    # TODO: Use list comprehension to filter out points in the 2nd quadrant
+    if len(points) == 0:
+        return []
+    return [point for point in points if point[0] <= 0 and point[1] >= 0]
+
+points = [(2, 3), (-1, 5), (-3, -2), (-4, 0)]
+print(filter_points(points))
